@@ -1,5 +1,6 @@
 import xlsxwriter
 
+
 workbook = xlsxwriter.Workbook('teste.xlsx')
 worksheet = workbook.add_worksheet()
 worksheet.set_column('A:A', 30)
