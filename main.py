@@ -118,76 +118,113 @@ def ler_xml(arquivo_xml):
         if 'Dobradiça Reta Toque' in completo.keys():
             worksheet.write('B3', f'{completo["Dobradiça Reta Toque"]}', formato)
             del completo["Dobradiça Reta Toque"]
+        
         if 'Dobradiça Curva Slow' in completo.keys():
             worksheet.write('B4', f'slow {completo["Dobradiça Curva Slow"]}', formato)
             del completo["Dobradiça Curva Slow"]
+        
         worksheet.write('B5', '0', formato)
         worksheet.write('B6', '0', formato)
         worksheet.write('B7', '0', formato)
         worksheet.write('B8', '0', formato)
         worksheet.write('B9', '0', formato)
         worksheet.write('B10', '0', formato)
+        
         if 'Atarraxante' in completo.keys():
             worksheet.write('B11', f'{completo["Atarraxante"]}', formato)
             del completo["Atarraxante"]
-        worksheet.write('B12', '0', formato)
+        
+        if 'Passante p/ 18mm' in completo.keys():
+            worksheet.write('B12', f'(18mm) {completo["Passante p/ 18mm"]}', formato)
+            del completo["Passante p/ 18mm"]
+        if 'Passante p/ 15mm' in completo.keys():
+            worksheet.write('B12', f'(15mm) {completo["Passante p/ 15mm"]}', formato)
+            del completo["Passante p/ 15mm"]
+        
         if 'Tambor' in completo.keys():
             worksheet.write('B13', f'{completo["Tambor"]}', formato)
             del completo["Tambor"]
+        
         if 'Suporte Pino p/ Prateleira' in completo.keys():
             worksheet.write('B14', f'{completo["Suporte Pino p/ Prateleira"]}', formato)
             del completo["Suporte Pino p/ Prateleira"]
+        
         if 'Suporte Cabide (conj. 2x peças)' in completo.keys():
             worksheet.write('B15', f'{completo["Suporte Cabide (conj. 2x peças)"]*2}', formato)
             del completo["Suporte Cabide (conj. 2x peças)"]
+        
         worksheet.write('B16', '0', formato)
+        
         if 'Cantoneira 13 x 13' in completo.keys():
             worksheet.write('B17', f'{completo["Cantoneira 13 x 13"]}', formato)
             del completo["Cantoneira 13 x 13"]
+        
         if 'Parafuso 3,5 x 16 un' in completo.keys():
             worksheet.write('B18', f'{completo["Parafuso 3,5 x 16 un"]}', formato)
             del completo["Parafuso 3,5 x 16 un"]
+        
         if 'Parafuso 4 x 16 un' in completo.keys():
             worksheet.write('B19', f'{completo["Parafuso 4 x 16 un"]}', formato)
             del completo["Parafuso 4 x 16 un"]
+        
         if 'Parafuso 4 x 20 un' in completo.keys():
             worksheet.write('B20', f'{completo["Parafuso 4 x 20 un"]}', formato)
             del completo["Parafuso 4 x 20 un"]
+        
         worksheet.write('B21', '0', formato)
+        
         if 'Parafuso 4 x 30 un' in completo.keys():
             worksheet.write('B22', f'{completo["Parafuso 4 x 30 un"]}', formato)
             del completo["Parafuso 4 x 30 un"]
+        
         worksheet.write('B23', '0', formato)
+        
         if 'Parafuso 4 x 40 un' in completo.keys():
             worksheet.write('B24', f'{completo["Parafuso 4 x 40 un"]}', formato)
             del completo["Parafuso 4 x 40 un"]
+        
         worksheet.write('B25', '0', formato)
+        
         worksheet.write('B26', '0', formato)
+        
         if 'Parafuso 3,5 x 40 un' in completo.keys():
             worksheet.write('B27', f'{completo["Parafuso 3,5 x 40 un"]}', formato)
             del completo["Parafuso 3,5 x 40 un"]
+        
         if 'Parafuso 3,5 x 20 un Flangeado' in completo.keys():
             worksheet.write('B28', f'{completo["Parafuso 3,5 x 20 un Flangeado"]}', formato)
             del completo["Parafuso 3,5 x 20 un Flangeado"]
+        
         if 'Parafuso 6 X 70' in completo.keys():
             worksheet.write('B29', f'{completo["Parafuso 6 X 70"]}', formato)
             del completo["Parafuso 6 X 70"]
+        
         if 'Bucha 8mm Comum' in completo.keys():
             worksheet.write('B30', f'{completo["Bucha 8mm Comum"]}', formato)
             del completo["Bucha 8mm Comum"]
+        
         if 'Parafuso 6 x 60 un Flangeado' in completo.keys():
             worksheet.write('B31', f'{completo["Parafuso 6 x 60 un Flangeado"]}', formato)
             del completo["Parafuso 6 x 60 un Flangeado"]
+        
         worksheet.write('B32', '0', formato)
+        
         if 'Cavilha' in completo.keys():
             worksheet.write('B33', f'{completo["Cavilha"]}', formato)
             del completo["Cavilha"]
+        
         if 'Cavilha 6X30' in completo.keys():
             worksheet.write('B34', f'{completo["Cavilha 6X30"]}', formato)
             del completo["Cavilha 6X30"]
+        
         worksheet.write('B35', '0', formato)
-        worksheet.write('B36', '0', formato)
-        worksheet.write('B37', '0', formato)
+        
+        if 'Parafuso 4,2 x 13 Ponta broca (un)' in completo.keys():
+            worksheet.write('B36', f'{completo["Parafuso 4,2 x 13 Ponta broca (un)"]}', formato)
+            del completo["Parafuso 4,2 x 13 Ponta broca (un)"]
+        
+        worksheet.write('B37', '1', formato)
+        
         worksheet.write('B38', '0', formato)
         worksheet.write('B39', '0', formato)
         worksheet.write('B40', '0', formato)
@@ -241,19 +278,37 @@ def ler_xml(arquivo_xml):
         #COLUNA 4
 
 
-        worksheet.write('D3', '0', formato)
+        if 'Sistema Deslizante AL33 (1x Porta)' in completo.keys():       
+            worksheet.write('D3', f'(AL33){completo["Sistema Deslizante AL33 (1x Porta)"]}', formato)
+            del completo["Sistema Deslizante AL33 (1x Porta)"]
+        if 'Sistema Deslizante AL60 (1x Porta)' in completo.keys():
+            worksheet.write('D3', f'(AL60){completo["Sistema Deslizante AL60 (1x Porta)"]}', formato)
+        if 'Sistema Deslizante Suspenso RO81 (1x Porta)' in completo.keys():   
+            worksheet.write('D3', f'(RO81){completo["Sistema Deslizante Suspenso RO81 (1x Porta)"]}', formato)
+        
         worksheet.write('D4', '0', formato)
         worksheet.write('D5', '0', formato)
         worksheet.write('D6', '0', formato)
         worksheet.write('D7', '0', formato)
         worksheet.write('D8', '0', formato)
-        worksheet.write('D9', '0', formato)
+
+        if 'Porta toalhas Hardt' in completo.keys():
+            worksheet.write('D9', f'{completo["Porta toalhas Hardt"]}', formato)
+            del completo["Porta toalhas Hardt"]
+        
         worksheet.write('D10', '0', formato)
         worksheet.write('D11', '0', formato)
         worksheet.write('D12', '0', formato)
         worksheet.write('D13', '0', formato)
-        worksheet.write('D14', '0', formato)
-        worksheet.write('D15', '0', formato)
+        
+        if 'Chapa União 45 x 75 (1 un)' in completo.keys():
+            worksheet.write('D14', f'{completo["Chapa União 45 x 75 (1 un)"]}', formato)
+            del completo["Chapa União 45 x 75 (1 un)"]
+
+        if 'Pino Alvenaria' in completo.keys():
+            worksheet.write('D15', f'{completo["Pino Alvenaria 1/2 100mm (1 un)"]}', formato)
+            del completo["Pino Alvenaria 1/2 100mm (1 un)"]
+
         worksheet.write('D16', '0', formato)
         worksheet.write('D17', '0', formato)
         worksheet.write('D18', '0', formato)
@@ -268,16 +323,22 @@ def ler_xml(arquivo_xml):
         worksheet.write('D27', '0', formato)
         worksheet.write('D28', '0', formato)
         worksheet.write('D29', '0', formato)
+        
         if 'Batente Porta' in completo.keys():
             worksheet.write('D30', f'{completo["Batente Porta"]}', formato)
             del completo["Batente Porta"]
+        
         worksheet.write('D31', '0', formato)
         worksheet.write('D32', '0', formato)
         worksheet.write('D33', '0', formato)
         worksheet.write('D34', '0', formato)
         worksheet.write('D35', '0', formato)
         worksheet.write('D36', '0', formato)
-        worksheet.write('D37', '0', formato)
+        
+        if 'Kit Escova De Vedação Schlege' in completo.keys(): 
+            worksheet.write('D37', f'{completo["Kit Escova De Vedação Schlege"]}', formato)
+            del completo["Kit Escova De Vedação Schlege"]
+       
         worksheet.write('D38', '0', formato)
         worksheet.write('D39', '0', formato)
         worksheet.write('D40', '0', formato)
