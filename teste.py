@@ -14,11 +14,10 @@ for arquivo in lista_ferragens:
         root = tree.getroot()
         
         for i in root.iter('ITEM'):
-            item = (i.attrib['REFERENCIA'], i.attrib['DESCRICAO'])
             
+            item = i.attrib['CAMINHOITEMCATALOG']
             if item not in total:
                 total.append(item)
-            
-            del item
-    
-print(total)
+            del item           
+for i in total:
+    print(i)
